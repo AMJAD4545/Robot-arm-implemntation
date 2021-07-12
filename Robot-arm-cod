@@ -1,0 +1,107 @@
+/*
+  This program controls five servo motors, which consequently controls the robot arm
+*/
+#include <Servo.h>
+  Servo M1,M2,M3,M4,M5,M6;
+
+  
+
+  int porrt1=A1;
+
+  int porrt2=A2;
+
+  int porrt3=A3;
+
+  int porrt4=A4;
+
+  int porrt5=A5;
+
+  
+
+  int porrt1_val;
+
+  int porrt2_val;
+
+  int porrt3_val;
+
+  int porrt4_val;
+
+  int porrt5_val;
+
+  
+
+  void setup() {
+
+    M1.attach(8);
+
+    M2.attach(9);
+
+    M3.attach(10);
+
+    M4.attach(11);
+
+    M5.attach(12);
+
+    
+
+  }
+
+
+
+
+
+void loop() {
+
+    porrt1_val=analogRead(porrt1);
+
+    porrt1_val=map(porrt1_val,0,1023,0,90);
+
+    M1.write(porrt1_val);
+
+    delay(15);
+
+    
+
+    
+
+    porrt2_val=analogRead(porrt2);
+
+    porrt2_val=map(porrt2_val,0,1023,0,90);
+
+    M2.write(porrt2_val);
+
+    delay(15);
+
+    
+
+      porrt3_val=analogRead(porrt3);
+
+    porrt3_val=map(porrt3_val,0,1023,0,90);
+
+    M3.write(porrt3_val);
+
+    delay(15);
+
+    
+
+      porrt4_val=analogRead(porrt4);
+
+    porrt4_val=map(porrt4_val,0,1023,0,90);
+
+    M4.write(porrt4_val);
+
+    delay(15);
+
+    
+
+      porrt5_val=analogRead(porrt5);
+
+    porrt5_val=map(porrt5_val,0,1023,0,90);
+
+    M5.write(porrt5_val);
+
+    delay(15);
+
+    
+
+}\
